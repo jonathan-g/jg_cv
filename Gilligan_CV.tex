@@ -2,7 +2,10 @@
 % !BIB program = biber
 \NeedsTeXFormat{LaTeX2e}
 \documentclass[10pt]{article}
-%\usepackage{jglucida}
+\newif\ifcredit
+\credittrue
+
+% \usepackage{jglucida}
 \usepackage{fontspec}
 \usepackage[bold-style=ISO]{unicode-math}
 \usepackage{noto}
@@ -19,12 +22,10 @@
 \newcommand{\thedate}{September 30, 2019}
 \newcommand{\fullname}{Jonathan M. Gilligan}
 
-\newif\ifcredit
-\credittrue
-
 \input{preamble}
 
 \addbibresource{jgpubs.bib}
+
 %
 \title{Curriculum Vitae}
 \date{\thedate}
