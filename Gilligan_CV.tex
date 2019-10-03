@@ -1,105 +1,30 @@
-% !TeX program = pdflatex
+% !TeX program = lualatex
 % !BIB program = biber
 \NeedsTeXFormat{LaTeX2e}
 \documentclass[10pt]{article}
-\usepackage{jglucida}
-%\usepackage{fontawesome}
-%\usepackage{academicons}
-%\usepackage{fontspec}
-\usepackage[%
-    hidelinks,%
-	breaklinks=true,%
-	pdfpagemode=UseOutlines,%
-	pdfstartview=Fit,%
-	pdfpagelayout=SinglePage,%
-	pdfpagelabels=true,%
-	pdfusetitle=true,%
-	]{hyperref}
-\usepackage{newclude}
-\usepackage{titling}
-\usepackage{titlesec}
-\usepackage{lastpage}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage[backend=biber,style=jgcv,credit=true]{biblatex}
-\usepackage[version=4]{mhchem}
-%\usepackage[squaren,Gray]{SIunits}
-\usepackage[american]{babel}
-\usepackage{comment}
+%\usepackage{jglucida}
+\usepackage{fontspec}
+\usepackage[bold-style=ISO]{unicode-math}
+\usepackage{noto}
+%\setmonofont{Latin Modern Mono}
+%\usepackage[ttdefault=true]{AnonymousPro}
+%\setmonofont{Anonymous Pro}[Scale=MatchUppercase, ScaleAgain=0.9]
+%\usepackage{inconsolata}
+%\setmonofont{InconsolataN}[Scale=MatchLowercase]
+
+\setmathfont{Cambria Math}
+
+\usepackage{microtype}
+
+\newcommand{\thedate}{September 30, 2019}
+\newcommand{\fullname}{Jonathan M. Gilligan}
 
 \newif\ifcredit
 \credittrue
 
-\DeclareEncodingSubset{TS1}{hlh}{1}%  % including \oldstylenums
-
-%\newcommand*{\ce}[1]{}
-
-%
-%
-%
-
-\newcommand*{\Note}{\textbf{\scshape Note:}}
+\input{preamble}
 
 \addbibresource{jgpubs.bib}
-%\addsectionbib[label=art]{articles.bib}
-%\addsectionbib[label=proc]{proceedings.bib}
-%\addsectionbib[label=chapt]{incollection.bib}
-
-%
-%
-\geometry{margin=1.0in}
-%
-%\renewcommand{\thesection}{\Alph{section}.}
-%\renewcommand{\thesubsection}{\thesection \arabic{subsection}.}
-%\renewcommand{\thesubsubsection}{\thesubsection \alph{subsubsection}.}
-%\renewcommand{\thesection}{\Alph{section}.}
-\renewcommand{\thesubsection}{\thesection \alph{subsection}.}
-\renewcommand{\thesubsubsection}{\thesubsection \roman{subsubsection}.}
-%
-\titleformat{\section}{\large\sffamily\bfseries}{\thesection}{0.5em}{}
-\titlespacing*{\section}{0pt}{2ex}{1ex}
-%
-\titleformat{\subsection}{\large\sffamily}{\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{1em}{2ex}{1ex}
-%
-\titleformat{\subsubsection}{\sffamily\bfseries}{\thesubsubsection}{0.5em}{}
-\titlespacing*{\subsubsection}{1.5em}{1.5ex}{0.5ex}
-%
-%
-\hfuzz 5pt
-%
-%
-\newcommand{\enquote}[1]{``#1''}
-\ifcredit
-\newenvironment{credit}{\begin{quote}\itshape}{\end{quote}}
-\else
-\excludecomment{credit}
-\fi
-\newcommand{\thedate}{August 31, 2019}
-%
-\pagestyle{fancy}
-
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-\newcommand{\chaptermark}[1]{\markboth{#1}{}}
-
-\fancyhead[L]{\sffamily\scshape Jonathan M. Gilligan}
-\fancyfoot[R]{\sffamily\scshape \rightmark}
-\fancyfoot[C]{\sffamily--\scshape\thepage\ of \pageref{LastPage}--}%
-\fancyhead[R]{\sffamily\scshape\thedate}
-%
-\fancypagestyle{plain}{%
-\fancyhf{} % clear all header and footer fields
-\fancyfoot[C]{\sffamily--\scshape\thepage\ of \pageref{LastPage}--} % except the center
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}}
-%
-\pretitle{\begin{center}\Large\sffamily\bfseries}
-\posttitle{\par\end{center}\vskip 0.5em}
-\preauthor{\begin{center}\large\lineskip 0.5em}
-\postauthor{\par\end{center}}
-\predate{\begin{center}}
-\postdate{\par\end{center}}
-\setlength{\droptitle}{-60pt}
 %
 \title{Curriculum Vitae}
 \date{\thedate}
@@ -112,68 +37,22 @@ Vanderbilt University}
 \tableofcontents
 
 \section{Contact Information}
-\noindent
-\parbox[t]{0.45\textwidth}{%
-\smash{Department of Earth \& Environmental Sciences,}
-Vanderbilt University\\
-PMB 351805\\
-2301 Vanderbilt Place\\
-Nashville, TN 37235-1805
-}
-\parbox[t]{0.5\textwidth}{\raggedleft
-{\small
-    %\faEnvelope\,%
-    \nolinkurl{jonathan.gilligan@vanderbilt.edu}}\\
-    %\faPhone\;%
-    615.322.2420\\
-    \textsc{Dep't:} 322.2976\\
-    \textsc{Orcid:} 0000-0003-1375-6686\\
-    \textsc{ssrn id:} 954061\\
-    %\smallskip
-    \qquad\llap{\raggedleft\small
-    %\faGlobe\;%
-    \nolinkurl{www.jonathangilligan.org}}
-}
-
+\include*{contact}
 
 \section{Degrees Earned}
 \begin{description}
-\item[Ph.D.:] 1991, Yale University (Physics). Dissertation, \emph{Precise Multiphoton Spectroscopy of the \ce{H2}, \ce{HD}, and \ce{D2} Molecules and a New Determination of the Ionization Potential of \ce{HD}.} Advisor: Edward E. Eyler.
-\item[B.A.:] 1982, Swarthmore College (Physics \& Philosophy), with Honors.
+	\include*{degrees}
 \end{description}
 \section{Employment History}
-\begin{description}
-\item[2016--present] Associate Professor, Dept.\ of Civil \& Environmental Engineering (secondary), Vanderbilt University.
-\item[2009--present] Associate Professor, Dept.\ of Earth \& Environmental Sciences, Vanderbilt University.
-\item[2008--2009] Research Assistant Professor, Dept.\ of Earth \& Environmental Sciences, Vanderbilt University.
-\item[2003--2009] Senior Lecturer, Dept.\ of Earth \& Environmental Sciences, Vanderbilt University.
-\item[2000--2003] The Robert T. Lagemann Assistant Professor of Living State Physics, Dept.\ of Physics \& Astronomy, Vanderbilt University.
-\item[1996--1998] Associate Director, Center for Molecular and Atomic Studies at Surfaces, Vanderbilt University.
-\item[1995--2000] Research Assistant Professor, Dept.\ of Physics \& Astronomy, Vanderbilt University.
-\item[1994--1995] Lecturer, Dept.\ of Physics \& Astronomy, Vanderbilt University.
-\item[1993--1994] Postdoctoral Research Associate, Cooperative Institute for Research in Environmental Science, National Oceanic \& Atmospheric Administration and the University of Colorado. Mentors: James W. Elkins (NOAA) and David W. Fahey (NOAA).
-\item[1991--1993] National Research Council Postdoctoral Associate, National Institute of Standards \& Technology. Mentor David W. Wineland.
-\item[1985--1991] Graduate Student/Teaching Assistant/Research Assistant, Yale University. Mentor Edward E. Eyler.
-\item[1983--1985] High school teacher, Commonwealth School, Boston MA.
-\end{description}
+\include*{employment}
 
 \section{Honors and Awards}
-\begin{description}
-\item[2018] The Chancellor's Award for Research, Vanderbilt University (shared with Michael Vandenbergh), recognizing ``excellence on the part of faculty for published research, scholarship or creative expression'' published in the previous three years (\$2000 cash prize)
-\item[2017] The Morrison Prize for the highest impact paper published in 2015--2016 on sustainability law and policy (shared with Michael Vandenbergh). Sandra Day O'Connor School of Law, Arizona State University (\$10,000 divided equally between Prof.\ Vandenbergh and myself).
-\item[1998] Outstanding Scientific Paper Award, NOAA Environmental Research Labs.
-\item[1995] NASA Group Achievement Award for outstanding accomplishments and contributions to the Airborne Southern Hemisphere Ozone Experiment and Measurements to Assess the Effects of Stratospheric Aircraft.
-\item[1991--1993] National Research Council Postdoctoral Associate
-\item[1985--1986] J.W. Gibbs Fellow, Yale University
-%\item[1982] B.A. with Honors, Swarthmore College.
-\end{description}
+\include*{honors}
 
+\clearpage
 \section{Research \& Creative Expression}
     \subsection{Citations and H-Index}
-    As of August 31, 2019, Google Scholar lists
-    4,798 citations (1,912 since 2014),
-    an h-index of~29 (20~counting only citations since 2014),
-    11~papers with 100+~citations, including 4~papers with 300+.
+    \include*{citation-metrics}
 	%
     \nocite{*}%
 	\subsection[Book]{Book (\textdagger\ denotes peer-reviewed book)}
@@ -189,7 +68,7 @@ Nashville, TN 37235-1805
     \end{refsection}
 
 	%
-	\subsection{Book Chapters}
+    \subsection[Book Chapters]{Book Chapters (* denotes student author, \textdagger\ denotes peer-reviewed chapter)}
     \begin{refsection}
         \nocite{*}
         \printbibliography[heading=none,type=incollection]
@@ -209,13 +88,19 @@ Nashville, TN 37235-1805
 	%
 	%
   \subsection{Software and other products}
-  		\include*{software}
+	\include*{software}
 	%
 	\subsection{Invited Presentations}
-	\include*{invited_talks}
+    \begin{enumerate}
+    \include*{invited_talks_tt}
+    \include*{invited_talks_ntt}
+    \end{enumerate}
 	%
 	\subsection{Published Abstracts}
-	\include*{abstracts}
+    \begin{enumerate}
+    \include*{abstracts_tt}
+    \include*{abstracts_ntt}
+    \end{enumerate}
 	%
 	%\subsection{Conference Presentations}
 	%
@@ -223,14 +108,18 @@ Nashville, TN 37235-1805
 	\subsection{Research Grants}
 	\include*{grants}
 	%
+\iftrue
 	\subsection{Creative Expression}
 	\include*{creative}
+\fi
 %
 \iftrue
 	\subsection{Working Papers} % \& Creative Expression in Progress}
-	\include*{working}
+    \include*{working}
 \fi
 
+
+\iftrue
 \section{Teaching-Related Activities}
 	\subsection{New courses introduced}
 	\include*{new_courses}
@@ -238,180 +127,55 @@ Nashville, TN 37235-1805
 	\subsection{Current Graduate Students}
     \subsubsection{Advisor:}
 	\begin{enumerate}
-    \item Kelsea Best (Ph.D. student, Earth \& Environmental Sciences, Advisor)
-    \item Pamela Hoover (Ph.D. student, Civil and Environmental Engineering, co-Advisor: Jim Clarke is Hoover's primary advisor; I am supervising her research on the environmental impact of printed versus electronic documents.).
-    \item David Knorr (M.S. student, Earth \& Environmental Sciences, Advisor)
-    \item Christopher Tasich (Ph.D. student, Earth \& Environmental Sciences, Advisor).
+		\include*{current_grad_students}
     \end{enumerate}
     \subsubsection{Member of Dissertation/Thesis Committee:}
     \begin{enumerate}
-    \item Moyo Ajayi (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Matthew Dietrich (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Ke ``Jack'' Ding (Ph.D. Student, Civil \& Environmental Engineering).
-    \item George Duffy (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Paul Johnson (Ph.D. Student, Environmental Engineering).
-    \item Rachel McKane (Ph.D. Student, Sociology).
-    \item Michaela Peterson (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Thomas Rechtman (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Sarah Williams (Ph.D. Student, Earth \& Environmental Sciences).
+    	\include*{current_grad_committees}
     \end{enumerate}
     \subsection{Former Graduate Students}
     \subsubsection{Advisor:}
     \begin{enumerate}
-	\item Emily Burchfield (Ph.D. 2017, Environmental Engineering, Advisor. Current position: Tenure-track Assistant Professor, Utah State University, Dep't. of Environment and Society).
-	\item John Nay (Ph.D. 2017, Integrated Computational Decision Science, Advisor. Current position: Information Law Institute Fellow, School of Law and Center for Data Science, New York University; Affiliate, Berkman-Klein Center for Internet and Society, Harvard University; and CEO, Skopos Labs, Inc.).
-	\item Rachel Shumaker (M.S. 2017, Earth \& Environmental Sciences, Advisor. Current position: Science Teacher, Dillard Middle School, Yanceyville, NC).
-    \item Kevona Belcher (M.S. Student, Environmental Engineering and Vanderbilt-Fisk Bridge Program, Advisor. Currently on extended medical leave).
-	\item Laura Benneyworth (Ph.D. 2016, Environmental Management and Policy, Advisor. Current position: Tennesee Dep't. of Transportation).
-	\item John Jacobi (Ph.D. 2014, Environmental Engineering. Current position: Natural Catastrophe Modeling Manager, SCOR Reinsurance). George Hornberger was Jacobi's primary advisor. I supervised research using agent-based modeling of farmer decision-making that formed one third of his dissertation.
+    	\include*{grad_alums}
     \end{enumerate}
     \subsubsection{Member of Dissertation/Thesis Committee:}
     \begin{enumerate}
-    \item Jennifer Bradham (Ph.D. 2019, Earth \& Environmental Sciences).
-    \item Leslie Gillespie-Marthaler (Ph.D. 2019, Environmental Engineering).
-    \item Kate Nelson (Ph.D. 2018, Environmental Engineering, Dissertation Committee).
-    \item Scott C. Worland (Ph.D. 2018, Environmental Engineering, Dissertation Committee).
-    \item Christian Hung (former Ph.D. Student, Economics, Dissertation Committee).
-    \item Brooke Patton (M.S. 2017, Earth \& Environmental Sciences, Committee).
-    \item Leslie Duncan (Ph.D. 2017, Environmental Engineering, Dissertation Committee).
-    \item Thushara Gunda (Ph.D. 2017, Environmental Engineering, Dissertation Committee).
-    \item Jennifer Pickering (Ph.D. 2016, Earth \& Environmental Science, Dissertation Committee).
-    \item Elena Wilmot (former Ph.D. student, Earth \& Environmental Sciences, Dissertation Committee).
-    \item Kendra Abkowitz (Ph.D. 2015, Environmental Engineering, Dissertation Committee).
-    \item Elizabeth Stone (M.S. 2015, Earth \& Environmental Science, Committee).
-    % \item John Jacobi (Ph.D. 2014, Environmental Engineering, Dissertation Committee and co-advisor).
-    \item Gregory George (M.S. 2014, Earth \& Environmental Science, Committee).
-    \item Shelley Donohue (M.S. 2013, Earth \& Environmental Science, Committee).
-    \item Courte Voorhees (Ph.D. 2012,  Community Research \& Action, Dissertation Committee).
-    \item Ryan Haupt (M.S. 2012, Earth \& Environmental Science, Committee).
-    \item Patricia Conway (former Ph.D. student, Community Research \& Action, Dissertation Committee).
-    \item Luis Fong (Ph.D. 2005, Physics, Dissertation Committee).
-    \item Andrew Rose (Ph.D. 2001, Physics, Dissertation Committee).
-    \item Christine Cheney (Ph.D. 2001, Physics, Dissertation Committee).
+    	\include*{former_grad_committees}
 	\end{enumerate}
 	\subsection{Undergraduate Advisees}
 	\begin{enumerate}
-	\item Kelsey Kaline (Class of 2014, Independent major in Environmental Policy).
-	\item Courtney van Stolk (2013, Independent major in Environmental Policy).
-	\item Jeremy Doochin (2010, Indepdendent major in Environmental Policy).
+		\include*{undergrad_advisees}
 	\end{enumerate}
 	\subsection{Undergraduate Research Projects Supervised}
 	\begin{enumerate}
-    \item Madeline Allen (2018--, EES major): Supervised senior honors thesis research on flood modeling (in collaboration with Professors Mark Abkowitz and Janey Camp in Civil \& Environmental Engineering).
-	\item Umang Chaudhry (2017--, EES and CSET double-major): Supervised independent research project during academic year, summer research project, and senior honors thesis research on impacts of gentrification on activities of daily life
-	for public-transit users in the Nashville Metropolitan Statistical Area.
-    \item Miguel Moravec (2017--2018, EES and CSET double-major): Supervised summer research and supervising senior honors thesis research on the impacts of gentrification on mobility among low-income resildents of the Nashville Metropolitan Statistical Area.
-    \item Marc Chen (2016--2017, Economics major): Co-supervised senior honors thesis research on poverty, access to public-transit, and employment in Nashville, and served as second reader of honors thesis. Mr. Chen's thesis was awarded highest honors.
-    \item Austin Channell (2015--2017, Civil Engineering major): Supervised immersive undergraduate research project on reducing individual and household greenhouse gas emissions.
-    Mr.~Channell won a Vanderbilt Undergraduate Summer Research fellowship to support this work and won a prize for his presentation of this work at the 2016 Vanderbilt Undergraduate Research Fair.
-    \item Heebong Kim (2016, EES major): Supervised honors enrichment project on science policy.
-	\item Joshua Timm (2015--2016, Political Science major): Supervised independent research on media bias in reporting on climate and weather and immersive research on corporate energy conservation as part of a TIPs project. Second reader on senior honors thesis.
-	\item Michael Diamond (2014, EES major): Supervised field research in Bangladesh.
-	\item Michael Diamond (2012, EES major): Supervised independent honors research project on the feasibility of terraforming Mars.
-	\item Michael Kofsky (2010--11, Political Science major): Supervised independent research on the environmental footprints of delivering movies for home viewing by mailing DVD's versus streaming broadband.
-    \item Jeremy Doochin (2008--09, Independent major in Environmental Policy): Supervised independent research project on corporate greenhouse gas emissions reduction.
-	\item Kelley Coffman (2004--05, Medicine, Health, \& Society major): Supervised senior honors thesis on citizen response to environmental contamination by Oak Ridge National Laboratory. Ms. Coffman received high honors for her thesis.
-	\item Megan O'Grady (2002--03, Physics major): Co-supervised senior research project and honors thesis together with Prof.~John Wikswo. Ms.~O'Grady subsequently won an NSF Graduate Fellowship.
+		\include*{undergrad_projects}
 	\end{enumerate}
+\fi
 
 \section{Service}
+\iftrue
 	\subsection{Service to Department}
     	\begin{description}
-            \item[2017--2018] Chair, Seminar and Speaker Committee.
-            \item[2017--2018] Member, Faculty Search Committee.
-        	\item[2015--2016] Chair, Subcommittee on Earth Sciences Curriculum.
-    		\item[2006--2014] Coordinator, Transdisciplinary Initiative on Environmental Systems and Doctoral Capstone Seminar.
+    		\include*{service_dept}
     	\end{description}
 
 	\subsection{Service to College}
     	\begin{description}
-    		\item[2003--present] Communication of Science, Engineering, and Technology Committee.
-    	    \item[2014--2015] Worked with Prof.\ Tiffiny Tung (Anthropology) on addressing problems of sexual harassment and hostile work environments for students conducting field research. Sought guidance from EEO and developed recommendations that Prof.\ Tung presented to Faculty Council.
-    		\item[2004--2009] Writing Advisory Board.
+    		\include*{service_college}
     	\end{description}
 
 	\subsection{Service to University}
     	\begin{description}
-    		\item[2018--present] Working with Blue Sky sustainability initiative as part of FutureVU planning process.
-            \item[2018] Organized panel on ethics in data science for Data Science Visions symposium.
-            \item[2017--present] Management Committee, The Erd\H{o}s Institute for Collaborative Research, Innovation, and Entrepreneurship (A joint venture of The Ohio State University and Vanderbilt University).
-            \item[2017] Co-chair (with Gail Carr-Williams), Public Transit Working Group, Transportation Planning, Vanderbilt FutureVU land-use planning initiative.
-            \item[2017] ``Climate Science Myth Busters'' Public lecture on myths and facts about climate science and global warming. School of Engineering (Apr.~12).
-            \item[2017] Led the inaugural Digital Salon at the Wond'ry, discussing cross-disciplinary applications of data science and computational modeling from engineering and the natural sciences to digital humanities (Feb.~21).
-            \item[2016] Panelist, ``After Paris, What Next?''  Roundtable discussion of climate policy after the Paris accord. Vanderbilt Law School, hosted by Chancellor Zeppos.
-            \item[2015--2017] Working with the Curb Center and the Wond'ry to build multi-university consortium to foster interdisciplinary faculty collaboration (Vanderbilt and Ohio State, founding members).  Worked with Prof.\ Roman Holowinsky at Ohio State to launch the Erd\"os Institute at Ohio State and develop university-industry connections to help doctoral students prepare for successful non-academic careers in the private sector.
-        	\item[2015] Panelist, ``Grand Challenge: Energy and the Future,'' (Vanderbilt Board of Trust Meeting, 13~Feb.)
-    	    \item[2013] Panelist, ``Starting the Conversation: Inspiring Your Students to Write'' (Aug.~29, Center for Teaching, Writing Studio, \& Heard Library).
-    	    \item[2013] Speaker, ``Dinner and a draft: Talking about writing and revising'' (Mar.~28, Dean of Commons \& Writing Studio).
-    	    \item[2013] Graduate honor fellowships evaluation committee.
-    		\item[2010--2013] Traffic \& Parking Committee.
-    		\item[2008] Co-chair (with Michael Bess), Faculty Seminar on the Future of Humanity, Center for Ethics.
-    		\item[1999--2000] Co-chair (with Lewis Branscomb) Faculty Seminar on Science and Technology Policy.
-    		\item[1996--1997] Chair, Faculty Seminar on Economics of Scientific Research (Vanderbilt Institute for Public Policy Studies).
-    		\item[Ongoing] Frequent guest lectures about climate change and science policy in Nursing, Global Public Health, Law, Management, Engineering, and Arts \& Science; speaking to student groups, such as Students Promoting Environmental Awareness and Responsibility, Wilderness Skills, McGill Hour, and Commons.
+    		\include*{service_university}
     	\end{description}
+\fi
 	\subsection{Service to Profession}
     	\begin{description}
-            \item[2018] Panelist, NSF grant review (Division of Civil, Mechanical, and Manufacturing Innovation)
-            \item[2018] Member, Working Group on the Use of Socio-Environmental Systems Modeling in Actionable Science, National Socio-Environmental Synthesis Center (National Science Foundation and University of Maryland).
-            \item[2018] Co-Chair, Environmental and Sustainability Applications Track, Winter Simulation Conference (Gothenburg, Sweden), Dec. 9--12 2018. Responsible for working with a European counterpart to develop the ESA track, including inviting speakers and session proposals, coordinating peer-review of submitted papers, appointing session chairs, and scheduling session.
-            \item[2017] Invited reviewer of National Academies report, \emph{The Human Element: Integrating Social and Behavioral Sciences in the Weather Enterprise}
-            \item[2017--2018] Participant, NSF workshop on Interdisciplinary Disaster Research. Developing resources on best practices for interdisciplinary disaster research.
-            \item[2017--present] Member, Human Dimensions Working Group, Community Surface Dynamics Modeling System (University of Colorado, Boulder).
-            \item[2017] Founding member and member of launch team, The Erd\H{o}s Institute for Collaborative Research, Innovation, and Entrepreneurship, Columbus, OH. The Erd\H{o}s Institute is an offshoot of
-            a joint effort by Vanderbilt and Ohio State to foster innovative collaborative interdisciplinary research by faculty, and to stimulate the commercialization of research products through partnerships
-            with private industry and sources of early investment funds.
-            \item[2016--present] External Advisory Committee, Urban Water Innovation Network, an NSF-sponsored sustainability research network (\$12.5 million funding).
-            \item[2016--present] Organizing committee, Annual Conference on Artificial Intelligence and the Law, Vanderbilt Law School.
-            \item[2016--present] Program Committee, Environmental and Sustainability Applications track, Winter Simulation Conference, IEEE and INFORMS.
-    	    \item[2015] Organizing Committee: Food, Energy, Water Systems Nexus Challenges Workshop: Technology and Information Fusion (sponsored by NSF, Nov. 5--6, 2015).
-    		\item[2007] Represented Vanderbilt University at Oak Ridge National Laboratory University Liaisons Meeting: Opportunities for Collaborative Research on Climate Change, Sept 26.
-    		\item[2008] Session organizer and chair, ``Quantifying Individual Emissions,'' Consumption, Law, \& Environment Conference, Vanderbilt Law School (Apr.\ 17--19, 2008).
-    		\item[2006] Chair, ``Intra- and Inter-Generational Equity'' session, Consumption, Law, \& Environment Workshop, Vanderbilt Law School (Oct.~19--20, 2006).
-    		\item[1997] Chair, Program Session on Laser and Ion-Beam Processing, ASM Materials Week '97, In\-di\-an\-a\-po\-lis, IN.
-    		\item[1996] Co-Chair, Program Session on Laser and Ion-Beam Processing, ASM Materials Week '96, Cincinnati, OH.
-    		\item[1996] Organizing Committee, 5$^{\mbox{\scriptsize th}}$ Annual Workshop of the Consortium for Nanostructured Materials, Nashville TN.
-    		\item[Ongoing] Review grant proposals for National Science Foundation, U.S. Department of Energy, UK National Environmental Research Council, and Indo-US Science \& Technology Forum.
-            \item[Ongoing] Review reports for National Academy of Sciences.
-    		\item[Ongoing] Review journal manuscripts for
-                Nature Climate Change,
-                Nature Communications,
-                Climatic Change,
-                Energy Policy,
-                Environmental Science \& Technology,
-                Royal Society of Chemistry,
-                PLOS ONE,
-                Sustainability Science,
-                Energy Policy,
-                Energy Economics,
-                Environmental Modeling \& Software,
-                ACM Transactions on Autonomous and Adaptive Systems,
-                International Journal of Biometeorology,
-                Proceedings of the National Academy of Sciences of India,
-                and
-                International Journal of Sustainable Transportation.
-    		\item[Ongoing] Review book proposals and manuscripts for Cambridge University Press, Oxford University Press, and Columbia University Press.
+    		\include*{service_profession}
         \end{description}
 	\subsection{Service to Community}
     	\begin{description}
-    		\item[2018] Organized day-long workshop on ``Data-Methods for Equitable Development in Nashville,'' with participants from Metro Nashville government, Metropolitan Planning Organization,
-    		and many community group.
-            \item[2017--present] Member, Environmental Public Health Community Advisory Group, Metro Nashville Department of Public Health. Working with Dr. Sanmi Areola (Deputy Director, Metro Department of Public Health)
-            %, Erin Jackson (Metro Public Health), Kimberly Jackson (Meharry Medical College and Health Impacts of Degraded Environments), Prof.\ Yolanda McDonald (Vanderbilt Community Action Program), and Carol Ziegler (Vanderbilt School of Nursing)
-            to establish a research network for monitoring air quality in public housing units and provide research opportunities for Vanderbilt undergraduate and graduate students.
-            \item[2017] ``Beyond Gridlock: The Private Governance Response to Climate Change.'' Public lecture (with Michael Vandenbergh) at Nashville Public Library as part of the ``Thinking out of the Lunch Box'' series. (Apr. 5).
-        	\item[2015--2017] Collaboration with University School of Nashville physics teacher Wilson Hubbell to incorporate scientific literacy about mathematical and computational modeling into high-school science curricula (Funding for USN from an Edwin E. Ford Leadership Challenge Grant).
-    		\item[2011--2012] Co-author, \emph{Sustainable Tennessee}, a report to state and local decision makers on the impacts of climate change on Tennessee and possible adaptations. Oak Ridge National Laboratory and Sustainable Tennessee.
-            % \item[2012] Co-author, \textit{Sustainable Tennessee}, a report to state and local decision-makers on the impacts of climate change on Tennessee and possible adaptations.
-        	\item[2009] Briefed representatives of Senators Corker and Alexander on environmental aspects of the Convention on the Law of the Sea Treaty (organized by the Pew Charitable Trusts), Nov.~18.
-        	\item[2009] Invited panelist, ``Health in Tennessee: The Impact of Climate Change,'' Public Policy Forum with Tennessee State Legislature (organized by Papasan Institute for Government Relations, U. Memphis), June~3.
-        	\item[2007--2009] Advisory Board on Environment, The Tennessean Newspaper.
-        	\item[2008] Testimony about climate change before Tennessee House Committee on Conservation and Environment, Feb. 28.
-        	\item[2006] Co-Organizer, Nashville Forum on Christianity and the Environment, Scarritt-Bennett Center, Sept.~30.
-        	\item[2006] Panelist, Belcourt Theatre discussion of genetically modified food. Apr.~7.
-            \item[2005] ``Democracy in the Age of Science'' Public lecture at Nashville Public Library as part of the ``Thinking out of the Lunch Box'' series. (Sept. 7).
-        	% \item[Ongoing] Regularly answer questions from local news media (Nashville Scene, The Tennessean, TV news, etc.) about environmental science and policy.
-        	% \item[Ongoing] Regularly speak on environmental issues to local churches, community groups, and colleges.
+    		\include*{service_community}
         \end{description}
 \end{document}
 

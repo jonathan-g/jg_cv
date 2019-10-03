@@ -24,6 +24,7 @@
 \usepackage[backend=biber,style=jgcv,credit=true]{biblatex}
 \usepackage[version=4]{mhchem}
 %\usepackage[squaren,Gray]{SIunits}
+\usepackage{csquotes}
 \usepackage[american]{babel}
 \usepackage{comment}
 
@@ -39,6 +40,8 @@
 %
 
 \newcommand*{\Note}{\textbf{\scshape Note:}}
+
+\def\UrlBreaks{\do\/\do-\do\.\do\%\do\_}
 
 \addbibresource{jgpubs.bib}
 %\addsectionbib[label=art]{articles.bib}
@@ -76,22 +79,22 @@
 \hfuzz 5pt
 %
 %
-\newcommand{\enquote}[1]{``#1''}
+% \newcommand{\enquote}[1]{``#1''}
 \ifcredit
 \newenvironment{credit}{\begin{quote}\itshape}{\end{quote}}
 \else
 \excludecomment{credit}
 \fi
-\newcommand{\thedate}{March 25, 2019}
+\newcommand{\thedate}{April 7, 2019}
 %
 \pagestyle{fancy}
 
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+% \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 \fancyhead[L]{\sffamily\scshape Jonathan M. Gilligan}
+\fancyfoot[L]{\sffamily\scshape \leftmark}
 \fancyfoot[R]{\sffamily\scshape \rightmark}
 \fancyfoot[C]{\sffamily--\scshape\thepage\ of \pageref{LastPage}--}%
 \fancyhead[R]{\sffamily\scshape\thedate}
@@ -181,61 +184,58 @@ Nashville, TN 37235-1805
 
 \section{Research \& Creative Expression}
 	\subsection{Citations and H-Index}
-		As of March 25, 2019, Google Scholar lists
-        4,514 citations (1,715 since 2014),
-        an h-index of~26 (18~counting only citations since 2014),
-        11~papers with 100+~citations, including 4~papers with 300+.
+		As of April 7, 2019, Google Scholar lists
+        4,602 citations (1,741 since 2014),
+        an h-index of~28 (19~counting only citations since 2014),
+        10~papers with 100+~citations, including 4~papers with 300+.
 	%
-    \nocite{*}%
-	\subsection[Book]{Book (\textdagger\ denotes peer-reviewed book)}
+    \subsection[Tenure-Track]{Tenure-Track Publications and Other Products}
+    \emph{The following were published while I was on the tenure track.}
+	\subsubsection[Book]{Book (\textdagger\ denotes peer-reviewed book)}
         \begin{refsection}
             \nocite{*}
-            \printbibliography[heading=tenurestatus,title={Tenure Track},type=book, keyword=tenuretrack, prenote=ttnote]
+            \printbibliography[heading=none, type=book, keyword=tenuretrack]
         \end{refsection}
 	%
-	\subsection[Articles]{Articles (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+	\subsubsection[Articles]{Articles (* denotes student author, \textdagger\ denotes peer-reviewed article)}
     \begin{refsection}
         \nocite{*}
-        \printbibliography[heading=tenurestatus,title={Tenure Track},type=article, keyword=tenuretrack, prenote=ttnote]
-        \printbibliography[heading=tenurestatus,title={Pre-Tenure Track},type=article, notkeyword=tenuretrack, prenote=prettnote]
+        \printbibliography[heading=none, type=article, keyword=tenuretrack]
     \end{refsection}
 
 	%
-	\subsection{Book Chapters (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+	\subsubsection[Book Chapters]{Book Chapters (* denotes student author, \textdagger\ denotes peer-reviewed chapter)}
     \begin{refsection}
         \nocite{*}
-        \printbibliography[heading=tenurestatus,title={Tenure Track},type=incollection, keyword=tenuretrack, prenote=ttnote]
-        \printbibliography[heading=tenurestatus,title={Pre-Tenure Track},type=incollection, notkeyword=tenuretrack, prenote=prettnote]
+        \printbibliography[heading=none, type=incollection, keyword=tenuretrack]
     \end{refsection}
 	%
-	\subsection[Articles in Conference Proceedings]{Articles in Conference Proceedings (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+	\subsubsection[Articles in Conference Proceedings]{Articles in Conference Proceedings (* denotes student author, \textdagger\ denotes peer-reviewed article)}
     \begin{refsection}
         \nocite{*}
-        \printbibliography[heading=tenurestatus,title={Tenure Track},type=inproceedings, keyword=tenuretrack, prenote=ttnote]
-        \printbibliography[heading=tenurestatus,title={Pre-Tenure Track},type=inproceedings, notkeyword=tenuretrack, prenote=prettnote]
+        \printbibliography[heading=none, type=inproceedings, keyword=tenuretrack]
     \end{refsection}
     %
-  \subsection{Patents}
-    \begin{refsection}
-        \nocite{*}
-        \printbibliography[heading=tenurestatus,title={Pre-Tenure Track},type=patent, notkeyword=tenuretrack, prenote=prettnote]
-       \end{refsection}
-	%
-	%
-  \subsection{Open-Source Software}
+  \subsubsection{Open-Source Software}
   		\include*{software}
 	%
-	\subsection{Invited Presentations}
-	\include*{invited_talks}
+  \subsubsection{Invited Presentations}
+    \begin{enumerate}
+    	\include*{invited_talks_tt}
+    \end{enumerate}
 	%
-	\subsection{Published Abstracts}
-	\include*{abstracts}
+	\subsubsection{Published Abstracts}
+    \begin{enumerate}
+	   \include*{abstracts_tt}
+    \end{enumerate}
 	%
 	%\subsection{Conference Presentations}
 	%
 	%
+    % \clearpage
 	\subsection{Research Grants}
-	\include*{grants}
+    \emph{This section includes all grants that were active while I was on the tenure track}
+	\include*{grants_tt}
 	%
 %	\subsection{Creative Expression}
 %	\include*{creative}
@@ -244,10 +244,67 @@ Nashville, TN 37235-1805
 	\subsection{Working Papers} % \& Creative Expression in Progress}
 	\include*{working}
 \fi
+\iftrue
+    \subsection{Work in Progress}
+    \include*{in_progress}
+\hrule
+
+    \subsection[Pre-Tenure-Track]{Pre-Tenure-Track Publications, Talks, and Other Products}
+    \emph{The following were published before I was on the tenure track.}
+    
+    \subsubsection[Articles]{Articles (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+    \begin{refsection}
+        \nocite{*}
+        \printbibliography[heading=none, type=article, notkeyword=tenuretrack]
+    \end{refsection}
+    
+    %
+    \subsubsection[Book Chapters]{Book Chapters (* denotes student author, \textdagger\ denotes peer-reviewed chapter)}
+    \begin{refsection}
+        \nocite{*}
+        \printbibliography[heading=none, type=incollection, notkeyword=tenuretrack]
+    \end{refsection}
+    %
+    \subsubsection[Articles in Conference Proceedings]{Articles in Conference Proceedings (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+    \begin{refsection}
+        \nocite{*}
+        \printbibliography[heading=none, type=inproceedings, notkeyword=tenuretrack]
+    \end{refsection}
+    %
+    \subsubsection{Patents}
+    \begin{refsection}
+        \nocite{*}
+        \printbibliography[heading=none,type=patent, notkeyword=tenuretrack]
+    \end{refsection}
+    %
+    %
+    \subsubsection{Invited Presentations}
+    \begin{enumerate}
+    \include*{invited_talks_ntt}
+    \end{enumerate}
+    %
+    \subsubsection{Published Abstracts}
+    \begin{enumerate}
+    \include*{abstracts_ntt}
+    \end{enumerate}
+    %
+    %\subsection{Conference Presentations}
+    %
+    %
+    
 
 \section{Teaching-Related Activities}
 	\subsection{New courses introduced}
-	\include*{new_courses}
+    \subsubsection{Tenure-Track}
+    \emph{These activities took place while I was on the tenure track}
+    \begin{enumerate}
+    	\include*{new_courses_tt}
+    \end{enumerate}
+    \subsubsection{Pre-Tenure-Track}
+    \emph{These activities took place pre-tenure-track}
+    \begin{enumerate}
+        \include*{new_courses_ntt}
+    \end{enumerate}
 	%
 	\subsection{Current Graduate Students}
     \subsubsection{Advisor:}
@@ -268,7 +325,7 @@ Nashville, TN 37235-1805
     \item Paul Johnson (Ph.D. Student, Environmental Engineering).
     \item Rachel McKane (Ph.D. Student, Sociology).
     \item Michaela Peterson (Ph.D. Student, Earth \& Environmental Sciences).
-    \item Sarah Williams (M.S. Student, Earth \& Environmental Sciences).
+    \item Sarah Williams (Ph.D. Student, Earth \& Environmental Sciences).
     \end{enumerate}
     \subsection{Former Graduate Students}
     \subsubsection{Advisor:}
@@ -368,7 +425,7 @@ Nashville, TN 37235-1805
 	\subsection{Service to Profession}
     	\begin{description}
             \item[2019] With Michael Vandenbergh, I co-organized a conference on ``The Tenth Anniversary of the Behavioral Wedge'' at Vanderbilt Law School, Feb.~29--Mar.~1, 2019.
-            \item[2018] Panelist, NSF grant review (Humans, Disasters, \& Built Environemnt program, Division of Civil, Mechanical, and Manufacturing Innovation)
+            \item[2018] Panelist, NSF grant review (Humans, Disasters, \& Built Environement program, Division of Civil, Mechanical, and Manufacturing Innovation)
             \item[2018] Member, Working Group on the Use of Socio-Environmental Systems Modeling in Actionable Science, National Socio-Environmental Synthesis Center (National Science Foundation and University of Maryland).
             \item[2018] Co-Chair, Environmental and Sustainability Applications Track, Winter Simulation Conference (Gothenburg, Sweden), Dec. 9--12 2018. Responsible for working with a European counterpart to develop the ESA track, including inviting speakers and session proposals, coordinating peer-review of submitted papers, appointing session chairs, and scheduling session.
             \item[2017] Invited reviewer of National Academies report, \emph{The Human Element: Integrating Social and Behavioral Sciences in the Weather Enterprise}
@@ -410,6 +467,10 @@ Nashville, TN 37235-1805
 	\subsection{Service to Community}
     	\begin{description}
             \item[2019] Presented tutorial on ``What Science Can and Cannot Say about Climate Change'' as part of a training workshop for journalists from the Midwestern U.S., organized by Inside Climate News at the Freedom Forum First Amendment Center, Nashville TN, Mar.~7.
+            \item[2018]  Met with newly-elected U.S. Representative Mark Green (TN-7) to answer his questions about climate science. Nashville TN, Dec.\ 17.
+            \item[2018] Addressed Rotary Club of McMinnville TN on the impacts of climate change in middle Tennessee. McMinnville TN, Dec.\ 6.
+            \item[2018] Intervewed by WCPI, McMinnville TN Public Radio station on the impacts of climate change in middle Tennessee. McMinnville TN, Dec.\ 6.
+            \item[2018] Addressed Breakfast Club of Nashville (businesswomen's group) on private-sector responses to climate change. Nashville TN, Nov.\ 29. 
             \item[2018] Presented tutorial on ``What Science Can and Cannot Say about Climate Change'' as part of a training workshop for journalists from the Southeastern U.S., organized by Inside Climate News at the Freedom Forum First Amendment Center, Nashville TN, Sept.~24.
     		\item[2018] Organized day-long workshop on ``Data-Methods for Equitable Development in Nashville,'' with participants from Metro Nashville government, Metropolitan Planning Organization,
     		and many community group.
@@ -427,7 +488,7 @@ Nashville, TN 37235-1805
         	\item[2006] Co-Organizer, Nashville Forum on Christianity and the Environment, Scarritt-Bennett Center, Sept.~30.
         	\item[2006] Panelist, Belcourt Theatre discussion of genetically modified food. Apr.~7.
             \item[2005] ``Democracy in the Age of Science'' Public lecture at Nashville Public Library as part of the ``Thinking out of the Lunch Box'' series. (Sept. 7).
-        	% \item[Ongoing] Regularly answer questions from local news media (Nashville Scene, The Tennessean, TV news, etc.) about environmental science and policy.
+        	\item[Ongoing] Regularly answer questions from local and regional news media (The Tennessean, WCPI McMinnville, WFPL Louisville, Chattanooga Public Radio, etc.) about environmental science and policy.
         	% \item[Ongoing] Regularly speak on environmental issues to local churches, community groups, and colleges.
         \end{description}
 \end{document}
