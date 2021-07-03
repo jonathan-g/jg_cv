@@ -1,0 +1,109 @@
+% !TeX document-id = {d206223e-80cd-48b7-93a5-45cd17290331}
+% !TeX program = lualatex
+% !BIB program = biber
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[10pt]{article}
+\newif\ifcredit
+\creditfalse
+
+% \usepackage{jglucida}
+\usepackage[LGR,LY1]{fontenc}
+\usepackage[osf]{noto}
+\usepackage{pifont}
+%\setmonofont{Latin Modern Mono}
+%\usepackage[ttdefault=true]{AnonymousPro}
+%\setmonofont{Anonymous Pro}[Scale=MatchUppercase, ScaleAgain=0.9]
+%\usepackage{inconsolata}
+%\setmonofont{InconsolataN}[Scale=MatchLowercase]
+\usepackage[bold-style=ISO]{unicode-math}
+\usepackage{fontspec}
+
+\setmathfont{Cambria Math}
+
+\usepackage{microtype}
+
+\newcommand{\thedate}{June 28, 2021}
+\newcommand{\fullname}{Jonathan M. Gilligan}
+
+\input{preamble}
+
+\fancyfoot[R]{}
+\addbibresource{jgpubs.bib}
+
+%
+\title{Short Curriculum Vitae}
+\date{\thedate}
+\author{Jonathan Mark Gilligan}
+\begin{document}
+\maketitle
+
+\section{Contact Information}
+\include*{contact}
+
+\section{Degrees Earned}
+\begin{description}
+	\include*{degrees}
+\end{description}
+\section{Employment History}
+\include*{employment}
+
+\section{Honors and Awards}
+\begin{description}
+\item[2018] The Chancellor's Award for Research, Vanderbilt University
+  (jointly with Michael Vandenbergh).
+\item[2017] The Morrison Prize for the highest impact paper of the year
+  on sustainability law and policy (jointly with Michael Vandenbergh).
+\item[1998] Outstanding Scientific Paper Award, NOAA Environmental Research
+  Labs.
+\item[1995] NASA Group Achievement Award for outstanding accomplishments and
+  contributions to the Airborne Southern Hemisphere Ozone Experiment and
+  Measurements to Assess the Effects of Stratospheric Aircraft.
+\item[1991--1993] National Research Council Postdoctoral Associate
+\item[1985--1986] J.W. Gibbs Fellow, Yale University
+\end{description}
+
+\section{Summary of Published Scholarship}
+    One book, 75~journal papers, 3~book chapters, 18~substantive papers in
+    conference proceedings, 2~patents, 7~open-source software packages.
+    \subsection{Citations and H-Index}
+    \include*{citation-metrics}
+	%
+  \subsection[Selected Publications]{Selected Publications (* denotes student author, \peerrevmark\ denotes peer-reviewed)}
+    \begin{refsection}
+    \nocite{vandenbergh:2017:beyond.politics,carrico:marriage:2020,elsawah:2020:grand.challenges,gilligan:2020:assessing.private.governance,gilligan:2020:beyond.wickedness,nielsen:2020:mitigation.analysis,gilligan:2019:collaboration,gilligan:2018:water.conservation,gilligan:2018:carrots.sticks,nay:2018:vegetation.health,wilson:2017:infilling,burchfield:2016:ag.adaptation,gunda:2016:drought,auerbach:2015:polders,gilligan:2014:political.feasibility,dietz:2009:behavioral.wedge}
+    \printbibliography[heading=none]
+    \end{refsection}
+	%
+%	\subsection{Invited Presentations}
+%  40 invited presentations.
+
+	\section{Research Grants}
+	PI or Co-PI on current and past grants totaling \$14 million since 2011.
+	%
+ \section{Selected Synergistic Activities}
+ \begin{description}
+   \item [2021--present] Associate Editor for Climate Law and Policy,
+     \emph{Frontiers in Climate}.
+   \item[2020--present] Director, Vanderbilt Climate and Society Grand
+     Challenge Initiative.
+  \item[2020--present] Advisor to Nashville Mayor's Sustainability Advisory
+    Committee.
+  \item[2020--present] External Advisory Committee, "Water Unaffordability in
+    the United States," NSF-sponsored project. PI: Laura Senier (Northeastern U.).
+    PI.
+   \item[2016--present] External Advisory Committee,
+     Urban Water Innovation Network, an NSF-sponsored sustainability research
+     network with \$12.5 million in funding.
+  \item[2016--present] Organizing Committee, Annual Conference on Artificial
+    Intelligence and the Law, Vanderbilt Law School.
+  \item[2016--present] Program Committee, Environmental and Sustainability
+    Applications track, Winter Simulation Conference, co-sponsored by IEEE and
+    INFORMS.
+  \item[2018--19] Collaborated with Inside Climate News and the First Amendment
+    Center to run training workshops about reporting on climate change for
+    journalists in the Southeast and Midwest.
+  \item[2018] Working Group on the Use of Socio-Environmental Systems Modeling
+    in Actionable Science, National Socio-Environmental Synthesis Center.
+ \end{description}
+\end{document}
+%% cv.tex ends here.
