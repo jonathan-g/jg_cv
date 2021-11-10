@@ -7,21 +7,22 @@
 \credittrue
 
 % \usepackage{jglucida}
-\usepackage{fontspec}
-\usepackage[bold-style=ISO]{unicode-math}
 \usepackage[LGR,LY1]{fontenc}
 \usepackage[osf]{noto}
+\usepackage{pifont}
 %\setmonofont{Latin Modern Mono}
 %\usepackage[ttdefault=true]{AnonymousPro}
 %\setmonofont{Anonymous Pro}[Scale=MatchUppercase, ScaleAgain=0.9]
 %\usepackage{inconsolata}
 %\setmonofont{InconsolataN}[Scale=MatchLowercase]
+\usepackage[bold-style=ISO]{unicode-math}
+\usepackage{fontspec}
 
 \setmathfont{Cambria Math}
 
 \usepackage{microtype}
 
-\newcommand{\thedate}{September 30, 2019}
+\newcommand{\thedate}{July 28, 2021}
 \newcommand{\fullname}{Jonathan M. Gilligan}
 
 \input{preamble}
@@ -58,26 +59,26 @@ Vanderbilt University}
     \include*{citation-metrics}
 	%
     \nocite{*}%
-	\subsection[Book]{Book (\textdagger\ denotes peer-reviewed book)}
+	\subsection[Book]{Book (\peerrevmark\ denotes peer-reviewed book)}
         \begin{refsection}
             \nocite{*}
             \printbibliography[heading=none,type=book]
         \end{refsection}
 	%
-	\subsection[Articles]{Articles (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+	\subsection[Articles]{Articles (* denotes student author, \peerrevmark\ denotes peer-reviewed article)}
     \begin{refsection}
         \nocite{*}
         \printbibliography[heading=none,type=article]
     \end{refsection}
 
 	%
-    \subsection[Book Chapters]{Book Chapters (* denotes student author, \textdagger\ denotes peer-reviewed chapter)}
+    \subsection[Book Chapters]{Book Chapters (* denotes student author, \peerrevmark\ denotes peer-reviewed chapter)}
     \begin{refsection}
         \nocite{*}
         \printbibliography[heading=none,type=incollection]
     \end{refsection}
 	%
-	\subsection[Articles in Conference Proceedings]{Articles in Conference Proceedings (* denotes student author, \textdagger\ denotes peer-reviewed article)}
+	\subsection[Articles in Conference Proceedings]{Articles in Conference Proceedings (* denotes student author, \peerrevmark\ denotes peer-reviewed article)}
     \begin{refsection}
         \nocite{*}
         \printbibliography[heading=none,type=inproceedings]
@@ -116,7 +117,7 @@ Vanderbilt University}
 	\include*{creative}
 \fi
 %
-\iftrue
+\iffalse
 	\subsection{Working Papers} % \& Creative Expression in Progress}
     \include*{working}
 \fi
