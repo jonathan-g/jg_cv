@@ -1,0 +1,85 @@
+\usepackage[%
+  hidelinks,%
+  breaklinks=true,%
+  pdfpagemode=UseOutlines,%
+  pdfstartview=Fit,%
+  pdfpagelayout=SinglePage,%
+  pdfpagelabels=true,%
+  pdfusetitle=true,%
+  ]{hyperref}
+\usepackage{newclude}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\ifcredit
+	\usepackage[backend=biber,style=jgcv,credit=true]{biblatex}
+\else
+	\usepackage[backend=biber,style=jgcv,credit=false]{biblatex}
+\fi
+\usepackage[version=4]{mhchem}
+%\usepackage[squaren,Gray]{SIunits}
+\usepackage{csquotes}
+\usepackage[american]{babel}
+\usepackage{comment}
+%
+%
+
+\newcommand*{\Note}{\textbf{\scshape Note:}}
+\renewbibmacro*{peer-rev:}{}
+\renewcommand*{\mkstudentauthor}{}
+%
+%
+\geometry{margin=1.0in}
+%
+%\renewcommand{\thesection}{\Alph{section}.}
+%\renewcommand{\thesubsection}{\thesection \arabic{subsection}.}
+%\renewcommand{\thesubsubsection}{\thesubsection \alph{subsubsection}.}
+%\renewcommand{\thesection}{\Alph{section}.}
+\renewcommand{\thesubsection}{\thesection \alph{subsection}.}
+\renewcommand{\thesubsubsection}{\thesubsection \roman{subsubsection}.}
+%
+\titleformat{\section}{\large\sffamily\bfseries}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex}{1ex}
+%
+\titleformat{\subsection}{\large\sffamily}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{1em}{2ex}{1ex}
+%
+\titleformat{\subsubsection}{\sffamily\bfseries}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\subsubsection}{1.5em}{1.5ex}{0.5ex}
+%
+%
+\hfuzz 5pt
+%
+%
+% \newcommand{\enquote}[1]{``#1''}
+\ifcredit
+\newenvironment{credit}{\begin{quote}\itshape}{\end{quote}}
+\else
+\excludecomment{credit}
+\fi
+%
+\pagestyle{fancy}
+
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\newcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\fancyhead[L]{\sffamily\scshape \fullname}
+\fancyfoot[R]{\sffamily\scshape \rightmark}
+\fancyfoot[C]{\sffamily--\scshape\thepage\ of \pageref{LastPage}--}%
+\fancyhead[R]{\sffamily\scshape\thedate}
+%
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\sffamily--\scshape\thepage\ of \pageref{LastPage}--} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+%
+\pretitle{\begin{center}\Large\sffamily\bfseries}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}\large\lineskip 0.5em}
+\postauthor{\par\end{center}}
+\predate{\begin{center}}
+\postdate{\par\end{center}}
+\setlength{\droptitle}{-60pt}
