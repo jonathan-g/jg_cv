@@ -7,16 +7,16 @@
   pdfpagelabels=true,%
   pdfusetitle=true,%
   ]{hyperref}
-\usepackage{newclude}
 \usepackage{titling}
 \usepackage{titlesec}
 \usepackage{lastpage}
 \usepackage{geometry}
 \usepackage{fancyhdr}
+\usepackage{newclude}
 \ifcredit
-	\usepackage[backend=biber,style=jgcv,credit=true]{biblatex}
+\usepackage[backend=biber,style=jgcv,credit=true]{biblatex}
 \else
-	\usepackage[backend=biber,style=jgcv,credit=false]{biblatex}
+\usepackage[backend=biber,style=jgcv,credit=false]{biblatex}
 \fi
 \usepackage[version=4]{mhchem}
 %\usepackage[squaren,Gray]{SIunits}
