@@ -3,6 +3,7 @@
 % !BIB program = biber
 \NeedsTeXFormat{LaTeX2e}
 \documentclass[10pt]{article}
+% \usepackage{newclude}
 \newif\ifcredit
 \creditfalse
 
@@ -41,22 +42,22 @@ Vanderbilt University}
 \tableofcontents
 
 \section{Contact Information}
-\include*{contact}
+\input{contact}
 
 \section{Degrees Earned}
 \begin{description}
-  \include*{degrees}
+  \input{degrees}
 \end{description}
 \section{Employment History}
-\include*{employment}
+\input{employment}
 
 \section{Honors and Awards}
-\include*{honors}
+\input{honors}
 
 % \clearpage
 \section{Research \& Creative Expression}
     \subsection{Citations and H-Index}
-    \include*{citation-metrics}
+    \input{citation-metrics}
   %
     \nocite{*}%
   \subsection[Book]{Book (\peerrevmark\ denotes peer-reviewed book)}
@@ -92,19 +93,19 @@ Vanderbilt University}
   %
   %
   \subsection{Software and other products}
-  \include*{software}
+  \input{software}
   %
   \subsection{Invited Presentations}
     \begin{enumerate}
-    \include*{invited_talks_tt}
-    \include*{invited_talks_ntt}
+    \input{invited_talks_tt}
+    \input{invited_talks_ntt}
     \end{enumerate}
   %
   \iffalse
   \subsection{Published Abstracts}
     \begin{enumerate}
-    \include*{abstracts_tt}
-    \include*{abstracts_ntt}
+    \input{abstracts_tt}
+    \input{abstracts_ntt}
     \end{enumerate}
     \fi
   %
@@ -112,49 +113,49 @@ Vanderbilt University}
   %
   %
   \subsection{Research Grants}
-\include*{grants}
+\input{grants}
   %
 \iftrue
   \subsection{Creative Expression}
-\include*{creative}
+\input{creative}
 \fi
 %
 %\iftrue
 %	\subsection{Working Papers} % \& Creative Expression in Progress}
-%    \include*{working}
+%    \input{working}
 %\fi
 
 
 \iftrue
 \section{Teaching-Related Activities}
   \subsection{New courses introduced}
-\include*{new_courses}
+\input{new_courses}
   %
   \subsection{Current Graduate Students}
     \subsubsection{Advisor:}
     \begin{enumerate}
-\include*{current_grad_students}
+\input{current_grad_students}
     \end{enumerate}
     \subsubsection{Member of Dissertation/Thesis Committee:}
     \begin{enumerate}
-\include*{current_grad_committees}
+\input{current_grad_committees}
     \end{enumerate}
   \subsection{Former Graduate Students}
     \subsubsection{Advisor:}
     \begin{enumerate}
-\include*{grad_alums}
+\input{grad_alums}
     \end{enumerate}
     \subsubsection{Member of Dissertation/Thesis Committee:}
     \begin{enumerate}
-\include*{former_grad_committees}
+\input{former_grad_committees}
     \end{enumerate}
   \subsection{Undergraduate Advisees}
   \begin{enumerate}
-\include*{undergrad_advisees}
+\input{undergrad_advisees}
   \end{enumerate}
   \subsection{Undergraduate Research Projects Supervised}
   \begin{enumerate}
-\include*{undergrad_projects}
+\input{undergrad_projects}
   \end{enumerate}
 \fi
 
@@ -162,26 +163,26 @@ Vanderbilt University}
 \iftrue
   \subsection{Service to Department}
   \begin{description}
-\include*{service_dept}
+\input{service_dept}
   \end{description}
 
   \subsection{Service to College}
   \begin{description}
-\include*{service_college}
+\input{service_college}
   \end{description}
 
   \subsection{Service to University}
   \begin{description}
-\include*{service_university}
+\input{service_university}
   \end{description}
 \fi
   \subsection{Service to Profession}
   \begin{description}
-\include*{service_profession}
+\input{service_profession}
   \end{description}
   \subsection{Service to Community}
   \begin{description}
-\include*{service_community}
+\input{service_community}
   \end{description}
 \end{document}
 
