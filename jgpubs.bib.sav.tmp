@@ -18,26 +18,6 @@
 @String{pspie = {Proceedings of the SPIE}}
 @String{pssa  = {Physica Status Solidi A: Applied Research}}
 
-@Article{sweitzer:2023:water.narratives,
-  author       = {Sweitzer, Matthew D. and Gunda, Thushara and Gilligan, J. M.},
-  date         = {2023-03-03},
-  journaltitle = {Frontiers in Environmental Science},
-  title        = {Water narratives in local newspapers within the United States},
-  doi          = {10.3389/fenvs.2023.1038904},
-  issn         = {2296-665X},
-  pubstate     = {published},
-  url          = {https://www.frontiersin.org/articles/10.3389/fenvs.2023.1038904},
-  volume       = {11},
-  author+an    = {self=3},
-  entrytype    = {Article},
-  file         = {full text:pdfs/sweitzer_2023_water_narratives:PDF},
-  group        = {Articles},
-  groups       = {Articles},
-  keywords     = {posttenure},
-  owner        = {Jonathan Gilligan},
-  peerreviewed = {true},
-}
-
 @Article{best:2022:random.forest,
   author       = {Best, Kelsea and Gilligan, Jonathan and Baroud, Hiba and Carrico, Amanda and Donato, Katharine and Mallick, Bishawjit},
   date         = {2022-03-25},
@@ -78,7 +58,9 @@
 }
 
 @Article{best:2021:random.forest,
-  author       = {Best, Kelsea B. and Gilligan, Jonathan M. and Baroud, Hiba and Carrico, Amanda R. and Donato, Katharine M. and Ackerly, Brooke A. and Mallick, Bishawjit},
+  author       = {Best, Kelsea B. and Gilligan, Jonathan M. and Baroud, Hiba
+    and Carrico, Amanda R. and Donato, Katharine M. and Ackerly, Brooke A.
+    and Mallick, Bishawjit},
   date         = {2021},
   journaltitle = {Journal of Computational Social Science},
   title        = {Random forest analysis of two household surveys can identify important predictors of migration in {Bangladesh}},
@@ -380,7 +362,7 @@
   file         = {full text:pdfs/nielsen_2020_improving_climate_change.pdf:PDF},
   group        = {Articles},
   groups       = {Articles},
-  keywords     = {climate change mitigation,interdisciplinarity,practical feasibility, posttenure},
+  keywords     = {climate change mitigation, interdisciplinarity, practical feasibility, posttenure},
   langid       = {english},
   peerreviewed = {true},
   publisher    = {Elsevier},
@@ -2200,118 +2182,4 @@ when it comes to risk perception. He concludes with a determination that a singu
   author+an    = {1=self;},
   credit       = {Eyler proposed this work. I performed the experiments and analyzed the data. Eyler and I interpreted the results. I wrote the paper, with contributions by Eyler.},
   entrytype    = {Article},
-  file         = {full text:pdfs/gilligan_1991_three_photon.pdf:PDF},
-  groups       = {Articles},
-  peerreviewed = {true},
-}
-
-@InProceedings{wineland:1991:spectrosopy,
-  author    = {Wineland, David J. and Bergquist, James C. and Bollinger, John J. and Itano, Wayne M. and Moore, Fred L. and Gilligan, Jonathan Mark and Raizen, Mark G. and Heinzen, Daniel J. and Weimer, Carl S. and Manney, C. H.},
-  booktitle = {Proceedings of the {E}nrico {F}ermi Summer School on Laser Manipulation of Atoms and Ions, {J}uly 1991, {V}arenna, {I}taly},
-  date      = {1991},
-  title     = {High-resolution spectroscopy of laser-cooled ions},
-  pages     = {539--551},
-  pubstate  = {published},
-  author+an = {6=self;},
-  credit    = {This was a review of many experiments. I performed some of the experiments. Wineland wrote the paper.},
-  groups    = {InProceedings},
-}
-
-@InProceedings{wineland:1991:trapped.ions,
-  author    = {Wineland, David J. and Bergquist, James C. and Bollinger, John J. and Itano, Wayne M. and Moore, Fred L. and Gilligan, Jonathan Mark and Raizen, Mark G. and Heinzen, Daniel J. and Weimer, Carl S. and Manney, C. H.},
-  booktitle = {Proceedings of the {E}nrico {F}ermi Summer School on Laser Manipulation of Atoms and Ions, {J}uly 1991, {V}arenna, {I}taly},
-  date      = {1991},
-  title     = {Recent experiments on trapped ions at the {N}ational {I}nstitute of {S}tandards and {T}echnology},
-  pages     = {553--567},
-  pubstate  = {published},
-  author+an = {6=self;},
-  credit    = {This was a review of many experiments. I performed some of the experiments. Wineland wrote the paper.},
-  groups    = {InProceedings},
-}
-
-@Article{mccormack:1989:rydberg,
-  author       = {McCormack, Elizabeth and Gilligan, Jonathan Mark and Cornaggia, Christian and Eyler, Edward Eugene},
-  date         = {1989},
-  journaltitle = {Physical Review A},
-  title        = {Measurement of high {R}ydberg states and the ionization potential of {H$_2$}},
-  pages        = {2260--2263},
-  pubstate     = {published},
-  volume       = {39},
-  author+an    = {2=self;},
-  credit       = {McCormack, Cornaggia, and I made equal contributions to performing these experiments and analyzing the data. Cornaggia and I did the data analysis. All the authors made equal contributions to writing the paper.},
-  entrytype    = {Article},
-  file         = {full text:pdfs/mccormack_1989_ip.pdf:PDF},
-  groups       = {Articles},
-  peerreviewed = {true},
-}
-
-@InProceedings{eyler:1988:multiphoton.spectroscopy,
-  author    = {Eyler, Edward Eugene and Gilligan, Jonathan Mark and McCormack, Elizabeth},
-  booktitle = {Advances in Laser Spectroscopy III},
-  date      = {1988},
-  title     = {Precise multiphoton spectroscopy of H$_2$}}
-
-,
-  pages     = {331--333},
-  pubstate  = {published},
-  series    = {AIP Conference Proceedings},
-  volume    = {172},
-  author+an = {2=self},
-  credit    = {All three authors made equal contributions to all aspects of this paper.},
-  file      = {full text:pdfs/eyler_1988_precise_spectroscopy.pdf:PDF},
-  groups    = {InProceedings},
-}
-
-@Article{eyler:1987:ef.state,
-  author       = {Eyler, Edward Eugene and Gilligan, Jonathan Mark and McCormack, Elizabeth and Nussenzweig, Andr\'e and Pollack, Edward},
-  date         = {1987},
-  journaltitle = pra,
-  title        = {Precise two-photon spectroscopy of {$E\leftarrow X^*$} intervals in {H$_2$}},
-  pages        = {3486--3489},
-  pubstate     = {published},
-  volume       = {36},
-  author+an    = {2=self;3=student;4=student;},
-  credit       = {Eyler, McCormack, and I performed most of the experiments and data analysis, with equal effort from each of us. All the authors contributed to writing the paper.},
-  entrytype    = {Article},
-  file         = {full text:pdfs/eyler_1987_two_photon.pdf:PDF},
-  groups       = {Articles},
-  peerreviewed = {true},
-}
-
-@InProceedings{eyler:1987:multiphoton.spectroscopy,
-  author    = {Eyler, Edward Eugene and Gilligan, Jonathan Mark},
-  booktitle = {Advances in Laser Spectroscopy II},
-  date      = {1987},
-  title     = {Precise multiphoton spectroscopy of excited states of {H$_2$}},
-  pages     = {388--390},
-  pubstate  = {published},
-  series    = {AIP Conference Proceedings},
-  volume    = {160},
-  author+an = {2=self;},
-  credit    = {Eyler proposed this work and I performed the experiments. Both of us contributed equally to analyzing and interpreting the data and writing the paper.},
-  groups    = {InProceedings},
-}
-
-@InProceedings{mccormack:1987:photodissociation,
-  author    = {McCormack, Elizabeth and Eyler, Edward Eugene and Gilligan, Jonathan Mark},
-  booktitle = {Proceedings of the XV International Conference on Quantum Electronics},
-  date      = {1987},
-  title     = {Precise photodissociation and multiphoton spectroscopy of {H$_2$}},
-  pages     = {58--60},
-  publisher = {Optical Society of America},
-  pubstate  = {published},
-  series    = {Technical Digest Series},
-  volume    = {21},
-  author+an = {3=self;},
-  credit    = {This work was mostly McCormack's. I assisted with performing the experiments.},
-  groups    = {InProceedings},
-}
-
-@Comment{jabref-meta: databaseType:biblatex;}
-
-@Comment{jabref-meta: grouping:
-0 AllEntriesGroup:;
-1 SearchGroup:peer reviewed\;0\;peerreviewed=true\;0\;0\;1\;\;\;\;;
-}
-
-@Comment{jabref-meta: saveOrderConfig:specified;year;true;citationkey;false;all;false;}
+  file         = {full 
