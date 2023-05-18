@@ -3,6 +3,7 @@
 % !BIB program = biber
 \NeedsTeXFormat{LaTeX2e}
 \documentclass[10pt]{article}
+% \usepackage{newclude}
 \newif\ifcredit
 \creditfalse
 
@@ -22,7 +23,7 @@
 
 \usepackage{microtype}
 
-\newcommand{\thedate}{Jan.\ 25, 2022}
+\newcommand{\thedate}{Feb.\ 19, 2023}
 \newcommand{\fullname}{Jonathan M. Gilligan}
 
 \input{alt_preamble}
@@ -31,7 +32,7 @@
 \addbibresource{jgpubs.bib}
 
 %
-\title{Short Curriculum Vitae}
+\title{}
 \date{\thedate}
 \author{Jonathan Mark Gilligan}
 \begin{document}
@@ -49,6 +50,8 @@
 
 \section{Honors and Awards}
 \begin{description}
+\item[2022] The Alexander Heard Distinguished Service Professor Award,
+  Vanderbilt University.
 \item[2018] The Chancellor's Award for Research, Vanderbilt University.
 \item[2017] The Morrison Prize for the highest impact paper of the year
   on sustainability law and policy.
@@ -61,46 +64,173 @@
 \end{description}
 
 \section{Summary of Published Scholarship}
-    One book, 76~journal papers, 3~book chapters, 19~substantive papers in
+    One book, 77~journal papers, 3~book chapters, 20~substantive papers in
     conference proceedings, 2~patents, 7~open-source software packages.
     \subsection{Citations and H-Index}
     \input{short-citation-metrics}
 	%
-  \subsection[Selected Publications]{Selected Publications}
+  \subsection[Selected Publications]{Selected Recent Publications}
     \begin{refsection}
-    \nocite{vandenbergh:2017:beyond.politics,elsawah:2020:grand.challenges,gilligan:2020:assessing.private.governance,nielsen:2020:mitigation.analysis,gilligan:2021:collaboration,gilligan:2018:water.conservation,gilligan:2018:carrots.sticks,gilligan:2014:dietz:2009:behavioral.wedge,ding:2021:Cape-Town}
+    \nocite{
+      vandenbergh:2017:beyond.politics,
+      best:2022:random.forest,
+      best:2021:random.forest,
+      best:2021:WSC,
+      gilligan:2021:collaboration,
+      ding:2021:Cape-Town,
+      martinez:2021:transit,
+      schenuit:2021:geoengineering,
+      elsawah:2020:grand.challenges,
+      carrico:marriage:2020,
+      gilligan:2020:assessing.private.governance,
+      gilligan:2020:beyond.wickedness,
+      nielsen:2020:mitigation.analysis,
+      gilligan:2019:diet,
+      gilligan:2018:water.conservation,
+      gilligan:2018:human.factor,
+      ruhl:2018:topic.modeling,
+      ackerly:2017:climate.community,
+      burchfield:2016:ag.adaptation,
+      burchfield:2016:abm,
+      gilligan:2015:flood.partsim,
+      benneyworth:2016:drinking.water,
+      auerbach:2015:polder,
+      nay:2015:decision.models,
+      dietz:2009:behavioral.wedge,
+      }
     \printbibliography[heading=none]
     \end{refsection}
 	%
-%	\subsection{Invited Presentations}
-%  40 invited presentations.
+  \subsection{Selected Recent Invited Presentations}
+   45 invited presentations, including:
+   \begin{itemize}
+     \item ``The Race Towards Climate Justice,'' 2023 Clinton Global
+       Initiative University (CGI-U) conference.
+       March 3--5, 2023.
+\item ``Modeling Behavior Change in Socio-Environmental Systems.''
+Invited talk, Second Coastlines and People Workshop on Identifying Interoperability and Data Needs of Interdisciplinary Models for
+Understanding Vulnerability of Coastal Systems. Florida International
+University (Sponsored by National Science Foundation). Oct. 4, 2022.
+% (Host paid for travel, lodging, and meals).
+\item ``Incorporating Human Behavior into Coupled Socio-Environmental Systems
+Models.'' Keynote talk, National Socioenvironmental Synthesis Center
+webinar on Methods in Socio-Environmental Systems Modeling.
+June 20, 2022. A video of my talk and the panel discussion that followed, has been posted to the
+SESYNC YouTube channel at \url{https://www.youtube.com/watch?v=rI994KY7ftE}
+\item ``Integrating Machine Learning with Agent-Based Modeling to Understand
+Human Impacts of Climate Change.'' Invited seminar, Florida International
+University. May 25, 2021.
+\item ``Accounting for Human Behavior in Models of Coupled Natural \& Human
+Systems,'' Invited presentation at Workshop on Coastal Observation and
+Modeling Systems, sponsored by NSF Coastlines and People program. Virtual
+conference hosted by Florida International University, Miami, FL,
+September 8, 2020. (98 attendees).
+\item ``Managing Sediment for Sustainability,'' Invited virtual seminar,
+International Centre for Climate Change and Development, Dhaka, Bangladesh,
+July 20, 2020.
+\item ``Beyond Wickedness: Managing Complex Systems and Climate Change,''
+Invited presentation, co-delivered with Michael P. Vandenbergh. Vanderbilt
+University Law Review Symposium on Governing Wicked Problems. Nashville, TN,
+October 25, 2019.
+\item ``The New Revolving Door," Invited presentation, co-delivered with
+Michael P. Vandenbergh. Case-Western Reserve Law School Symposium on Fifty
+Years of the Environmental Protection Agency. Cleveland, OH, October 18, 2019.
+\item ``Agent-Based Modeling of Community Resilience and Environmental
+Non-Migration,'' Invited presentation, First International Conference on
+Environmental Non-Migration: Framework, Methods, and Cases, Technical
+University of Dresden, June 19-21 2019.
+\item ``Sediment Management and Sea-Level Rise,'' invited presentation, Fifth
+Annual Gobeshona International Conference on Climate Knowledge, International
+Centre for Climate Change and Development, Dhaka, Bangladesh, January 9, 2019.
+\item Invited panelist, ``What Can an Individual Do to Help Limit Climate
+Change,'' public panel discussion at Copenhagen Business School, Aug. 29,
+2018.
+\item Invited participant, Workshop on Household Actions to Reduce Greenhouse
+Gas Emissions, Copenhagen Business School, Copenhagen Denmark, August 27--28
+2018
+% (Host paid for travel, lodging, and meals).
+% \item International Symposium on Society and Resource Management (ISSRM), Salt Lake City, UT, June 17--21 2018.
+\item Invited panelist, ``Re-envisioning `Sustainable' Deltas through Critical
+Geography,'' American Association of Geographers Annual Conference, April
+2018.
+\item ``Carrot and Sticks in Private Climate Governance,'' invited
+presentation, Joint Conference on Environmental Regulation. The Hagler
+Institute for Advanced Study at the Texas A\&M University School of Law and
+the Classical Liberal Institute at the New York University School of Law.
+March 9--10, 2018.
+% (Host paid for travel, lodging, and meals).
+\item ``Energy and the Economy of Sri Lanka,'' invited presentation, Workshop
+on Assessing Stakeholder Preferences in Planning of Energy Sector in Sri
+Lanka, Colombo, Sri Lanka, August~11, 2017.
+\item ``Understanding and Adapting to Water Scarcity at the Community Level,''
+invited keynote presentation, Conference on Recognizing Climate Change Risk
+of Dry Zone Farmers, Ministry of Disaster Management, Colombo, Sri Lanka,
+August~10, 2017.
+\item ``Planning for Environmental Stress and Disasters: The Importance of
+Interdisciplinary Approaches,'' invited presentation to the Institute of Town
+Planners of Sri Lanka and the Organization of Professional Associations of
+Sri Lanka. Colombo, Sri Lanka, August~9, 2017.
+\item ``Quantifying the Potential for Greenhouse Gas Emissions Reductions
+through Private Governance,'' invited presentation to National Academies
+Board on Environmental Change and Society. National Academies, Washington,
+DC, July 11, 2017.
+% (Host covered travel, lodging, \& meals).
+\item  ``Connecting Human and Natural Systems: The Role of Agent-Based
+Simulations,'' invited keynote talk, CSDMS 2017 Annual Meeting on Modeling
+Coupled Earth and Human Systems. Boulder, CO. May 23--25 2017.
+% (Host covered travel, lodging, meals, \& conference registration).
+My talk is online at
+\url{https://www.youtube.com/watch?v=v6i5_P_OOcU}.
+\item  ``Dynamics of Individual and Collective Agricultural Adaptation to Water
+Security,'' invited talk, Winter Simulation Conference 2016, Arlington, VA,
+December~12, 2016.
+   \end{itemize}
 
-	\section{Research Grants}
-	PI or Co-PI on current and past grants totaling \$14 million since 2011.
-	%
  \section{Selected Synergistic Activities}
  \begin{description}
-   \item [2021--present] Principal Investigator, NSF Planning Grant to work with state and local
+   \item [2021--present] Principal Investigator, NSF Sustainable Regional
+   Systems Planning Grant to work with state and local
    governments, businesses, and communities to improve resilient and
    equitable access to
    of electricity, transportation, and telecommunications in urban and rural communities in the Southeast.
-   \item [2020--present] Member, research partnership between Vanderbilt,
-   cities of Chattanooga and Nashville, and University of Tennessee, Chattanooga to improve the efficiency of public transit service.
-  \item [2021--present] Associate Editor for Climate Law and Policy,
-     \emph{Frontiers in Climate}.
+   \item [2021--present] Co-Principal Investigator, NSF Future of Work at the
+   Human-Technology Frontier Planning Grant to work with water-treatment
+   utilities to develop interactive computational tools for training the
+   next generation of water treatment operators, and to facilitate human
+   decision-making about maintaining water quality in the face of
+   climate change.
+   \item [2021--present] Associate Editor for Climate Law and Policy,
+\emph{Frontiers in Climate}.
+   \item[2021--present] Co-Chair Interdisciplinary Climate Studies
+   Curriculum Committee, Vanderbilt University. Developed a novel
+   interdisciplinary major in climate studies that incorporates humanities,
+   social-science, and natural-science perspectives.
    \item[2020--present] Director, Vanderbilt Climate and Society Grand
      Challenge Initiative.
+     Leading a university initiative to bring scholars in humanities, social
+     sciences and natural sciences together for collaborative scholarship and
+     interdisciplinary teaching about climate change and its impacts on
+     society.
   \item[2020--present] Contributor to Nashville Mayor's Sustainability Advisory
     Committee.
+   \item [2020--present] Member, research partnership between Vanderbilt,
+cities of Chattanooga and Nashville, and University of Tennessee, Chattanooga to improve the efficiency of public transit service.
    \item[2016--2021] External Advisory Committee,
      Urban Water Innovation Network, an NSF-sponsored sustainability research
      network with \$12.5 million in funding.
+    \item [2019--2021] External Advisory Committee,
+    Water Unaffordability in the United States, an interdisciplinary NSF-sponsored research project, Laura Senier, PI.
+  \item[2019] Scientific Committee, First International Conference on Environmental Non-Migration. Dresden Germany, June 19--21, 2019.
   \item[2016--2019] Co-Principal Investigator, Vanderbilt Initiative for Smart-City Operations
      Research.
+   \item[2018] Co-Chair, Environment and Sustainability Applications Track,
+     Winter Simulation Conference. Goteborg, Sweden. Dec.\ 9--12, 2018.
 \iffalse
   \item[2016--present] Organizing Committee, Annual Conference on Artificial
     Intelligence and the Law, Vanderbilt Law School.
-  \item[2016--present] Program Committee, Environmental and Sustainability
+\fi
+\iftrue
+  \item[2016--2022] Program Committee, Environmental and Sustainability
     Applications track, Winter Simulation Conference, co-sponsored by IEEE and
     INFORMS.
   \item[2018] Working Group on the Use of Socio-Environmental Systems Modeling
