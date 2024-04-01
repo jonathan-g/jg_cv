@@ -10,5 +10,6 @@
 *.toc
 *.run.xml
 *.synctex.gz
+*.synctex(busy)
 *~
 *.sav
